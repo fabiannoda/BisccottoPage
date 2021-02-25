@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Personalizar Pedido</title>
+		<meta charset="utf-8">
+		<!--JQUERY-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<!--STYLE PROPIO-->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--MATERIALIZE-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<!--ICONOS-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--SWEET ALERT-->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<!--FUENTES-->
+		<link rel="stylesheet" type="text/css" href="css/fuentes.css">
+	</head>
+	<body style="background-color: #ffccbc">
+		<nav id="barra">
+			<div class="nav-wrapper deep-orange lighten-3">
+				<center><a href="#" class="brand-logo"><h1 id="titulo">Biscotto</h1></a></center>
+			</div>
+		</nav>
+		<br>
+		<br>
+		<div class="todito">
+			<div class="container">
+				<div class="row">
+					<div class="contenido">
+						<div class="col s2">
+							<img onclick="empaque(1)" class="imagen" src="img/empa1.png">
+							<img onclick="empaque(2)" class="imagen" src="img/empa2.png">
+							<img onclick="empaque(3)" class="imagen" src="img/empa3.png">
+							<img onclick="empaque(4)" class="imagen" src="img/empa4.png">
+						</div>
+						<div class="col s2">
+							<img onclick="empaque(5)" class="imagen" src="img/empa5.png">
+							<img onclick="empaque(6)" class="imagen" src="img/empa6.png">
+							<img onclick="empaque(7)" class="imagen" src="img/empa7.png">
+						</div>
+					</div>
+					<div class="col s8">
+						<div id="tarjetita" class="card brown lighten-4">
+							<div class="card-content black-text">
+								<img style="display: none" id="empa1" class="empaques" src="img/empa1.png">
+								<img style="display: none" id="empa2" class="empaques" src="img/empa2.png">
+								<img style="display: none" id="empa3" class="empaques" src="img/empa3.png">
+								<img style="display: none" id="empa4" class="empaques" src="img/empa4.png">
+								<img style="display: none" id="empa5" class="empaques" src="img/empa5.png">
+								<img style="display: none" id="empa6" class="empaques" src="img/empa6.png">
+								<img style="display: none" id="empa7" class="empaques" src="img/empa7.png">
+								<img style="display: none" id="ramo1" class="ramo" src="img/ramo1.png">
+								<img style="display: none" id="ramo2" class="ramo" src="img/ramo2.png">
+								<img style="display: none" id="ramo3" class="ramo" src="img/ramo3.png">
+								<img style="display: none" id="moño1" class="moño" src="img/mo1.png">
+								<img style="display: none" id="moño2" class="moño" src="img/mo2.png">
+								<img style="display: none" id="moño3" class="moño" src="img/mo3.png">
+								<img style="display: none" id="moño4" class="moño" src="img/mo4.png">
+								<img style="display: none" id="moño5" class="moño" src="img/mo5.png">
+								<img style="display: none" id="moño6" class="moño" src="img/mo6.png">
+								<img style="display: none" id="moño7" class="moño" src="img/mo7.png">
+								<img style="display: none" id="moño8" class="moño" src="img/mo8.png">
+								<img style="display: none" id="moño9" class="moño" src="img/mo9.png">
+								<img style="display: none" id="moño10" class="moño" src="img/mo10.png">
+								<img style="display: none" id="tar1" class="tarjeta" src="img/ta1.jpg">
+								<img style="display: none" id="tar2" class="tarjeta" src="img/ta2.jpg">
+								<img style="display: none" id="tar3" class="tarjeta" src="img/ta3.jpg">
+								<img style="display: none" id="gal1" class="galleta" src="img/mm.png">
+								<img style="display: none" id="gal2" class="galleta" src="img/choco.png">
+								<img style="display: none" id="gal3" class="galleta" src="img/red.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>				
+			<center><div class="pagina">
+				<ul class="pagination">
+					<a class="waves-effect waves-light btn disabled">Anterior</a>
+					<li class="active"><a>1</a></li>
+					<li class="disabled"><a>2</a></li>
+					<li class="disabled"><a href="#!">3</a></li>
+					<li class="disabled"><a href="#!">4</a></li>
+					<li class="disabled"><a href="#!">5</a></li>
+					<a onclick="paginacion(2)" class="waves-effect waves-light btn">Siguiente</a>
+				</ul>
+			</div></center>
+		</div>
+		<br>
+		<br>
+		<footer class="page-footer deep-orange lighten-3">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s12">
+						<h5 class="brown-text text-darken-1">Footer Content</h5>
+						<p class="brown-text text-darken-1">You can use rows and columns here to organize your footer content.</p>
+					</div>
+					<div class="col l4 offset-l2 s12">
+						<h5 id="foo" class="brown-text text-darken-1">Contáctanos</h5>
+						<ul>
+							<div class="iconos">
+								<div class="container">
+									<div class="row">
+										<div class="col s3">
+											<li><a href="https://www.instagram.com/biscottousa/" target="_blank"><img style="border-radius: 50px" alt="Síguenos en Instagram" height="40" width="40" src="https://4.bp.blogspot.com/-Ilxti1UuUuI/XCrIy6hBAcI/AAAAAAAAH_k/QV5KbuB9p3QB064J08W2v-YRiuslTZnLgCLcBGAs/s1600/instagram.png" title="Síguenos en Instagram"/></a></li>
+										</div>
+										<div class="col s3">
+											<li><a href="https://www.flipsnack.com/biscottousa/portafolio-biscotto.html" target="_blank"><img style="border-radius: 50px" alt="Mira nuestro catálogo" height="40" width="40" src="https://yt3.ggpht.com/a/AGF-l79I4puXZLa-AKF7jGNDNdW2DZNEHMEr6B-ijg=s900-mo-c-c0xffffffff-rj-k-no" title="Mira nuestro catálogo"/></a></li>
+										</div>
+										<div class="col s3">
+											<li><a href="https://api.whatsapp.com/send?phone=573114704752" target="_blank"><img alt="Escríbenos" style="border-radius: 50px" height="40" width="40" src="https://2.bp.blogspot.com/-hJd7RLbG6dQ/XCrI389R_CI/AAAAAAAAIA8/2zdJ54oo7GAjqppIbfin0jvgf6cvk3VPgCLcBGAs/s1600/whatsapp.png" title="Escríbenos"/></a></li>
+										</div>
+									</div>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container brown-text text-darken-1">
+					© 2014 Copyright Text
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript" src="js/model.js"></script>
+</html>
